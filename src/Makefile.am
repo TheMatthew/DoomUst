@@ -16,7 +16,7 @@ else
 games_PROGRAMS = prboom-plus
 endif
 
-CFLAGS = @CFLAGS@ @SDL_CFLAGS@
+CFLAGS = @CFLAGS@ @SDL_CFLAGS@ -finstrument-functions
 
 prboom_plus_game_server_SOURCES = d_server.c protocol.h
 prboom_plus_game_server_LDADD = POSIX/libposixdoom.a SDL/i_network.o @NET_LIBS@ @SDL_LIBS@
