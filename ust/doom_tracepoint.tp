@@ -1,0 +1,27 @@
+TRACEPOINT_EVENT(
+	doom_tracepoint,
+        func_entry,
+        TP_ARGS(long, val),
+            TP_FIELDS(
+                ctf_integer_hex(long, address, val)
+	)
+)
+
+
+TRACEPOINT_EVENT(
+	doom_tracepoint,
+        func_exit,
+        TP_ARGS(long, val),
+            TP_FIELDS(
+                ctf_integer_hex(long, address, val)
+	)
+)
+
+TRACEPOINT_LOGLEVEL(
+	doom_tracepoint, func_entry, TRACE_INFO
+)
+
+
+TRACEPOINT_LOGLEVEL(
+	doom_tracepoint, func_exit, TRACE_INFO
+)
